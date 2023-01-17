@@ -1,0 +1,100 @@
+TODO apply: info.apply
+1.apply函数的返回，永远都是返回info本身 （永远都是返回调用者本身） 【等同于also】《推荐 链式调用》
+2.apply函数 的 匿名函数体{ 持有的是 this == info本身（this == 调用者本身） } 【等同于run】
+
+TODO let：集合.let
+1.let函数的返回，是根据匿名函数最后一行返回的 变化而变化 【等同于run】
+2.let函数 的  的 匿名函数体{ 持有的是 it == 集合本身（it == 调用者本身） }
+
+TODO run: str.run
+1.run函数的返回，是根据匿名函数最后一行返回的 变化而变化 【等同于let】
+2.run函数 的  的 匿名函数体{ 持有的是 this == str（this == 调用者本身） } 【等同于apply、also】
+
+TODO with: with(str)  with和run一模一样，唯一的区别就在于，使用时不同（run可以链式调用，with不可以）
+1.run函数的返回，是根据匿名函数最后一行返回的 变化而变化 【等同于let】
+2.run函数 的  的 匿名函数体{ 持有的是 this == str（this == 传递者本身） } 【等同于apply】
+name? = null;   name ?.run {}     with(name)
+
+TODO also: str.also
+1.also函数的返回，永远都是返回str本身 （永远都是返回调用者本身） 【等同于apply】《推荐 链式调用》
+2.also函数 的  的 匿名函数体{ 持有的是 it == str本身（it == 调用者本身） } 【等同于let】
+
+
+Todo =================================   apply 与 also 是一个类别的 属于一类的    =================================
+相同点：apply与also返回类型，是一样的：他们永远都是返回调用者本身，匿名函数，最后一行无法作为返回值，不影响函数返回类型
+不同点：匿名函数里面 apply{ 持有this setFilexxx() }  also { 持有it it.setFilexxx() }
+应用点：
+       val file本身（调用者本身） = File("xx").apply { setFilexxx() ... }.apply { ... }.apply { ... } 链式调用
+       val file本身（调用者本身） = FIle("xx").also { it.setFilexxx() ... }.also { ... }.also { ... } 链式调用
+
+val info本身（调用者本身） = info.apply {
+    this == info本身（调用者本身）
+    ...
+    "Derry"
+}.apply {
+    ...
+}.apply {
+    ...
+}
+
+val info本身（调用者本身） = info.also {
+    it == info本身（调用者本身）
+    ...
+    true
+}.also {
+    ...
+}.also {
+    ...
+}
+
+
+Todo =================================   run 与 let 与 with 是一个类别的 属于一类的    =================================
+相同点：run与let返回类型，是一样的，都会根据匿名函数最后一行返回类型而决定 run与let的返回类型（是根据匿名函数最后一行的变化而变化）
+不同点：匿名函数里面 run持有this  let持有it
+应用点：
+      info.run { show("内容:$this") show("内容长度:$length") show("${if (this is String) 你是String类型 else 你不是String类型}") }
+      info.let { show("内容:it") show("内容长度:$it.length") show("${if (it is String) 你是String类型 else 你不是String类型}") }
+
+val r : Boolean类型 = info.run {  this == info本身
+    this.length
+    length
+
+    545
+    454.545
+    534543.5f
+    true // 最后一行
+}
+
+val r : Char类型 = info.let {  it == info本身
+    it.length
+
+    545
+    454.545
+    534543.5f
+    true
+    'A' // 最后一行
+}
+
+TODO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 下面是with
+
+相同点：with与run与let返回类型，是一样的，都会根据匿名函数最后一行返回类型而决定 run与let的返回类型（是根据匿名函数最后一行的变化而变化）
+不同点：匿名函数里面 run持有this  let持有it  with持有this
+应用点：
+      info.run { show("内容:$this") show("内容长度:$this.length") show("${if (this is String) 你是String类型 else 你不是String类型}") }
+      info.let { show("内容:it") show("内容长度:$it.length") show("${if (it is String) 你是String类型 else 你不是String类型}") }
+      with(info)  { show("内容:this") show("内容长度:$this.length") show("${if (this is String) 你是String类型 else 你不是String类型}") }
+
+TODO =======================================  let 与 apply 内部源码原理分析
+
+// TODO let
+// 1. let的返回类型是 根据匿名函数的变化而变化（lambda的返回类型变化而变化）
+// 2. 匿名函数里面持有的是 it == I == info本身(调用者本身)
+inline fun <I, O> I.let(lambda : (I) -> O) : O = lambda(this)
+
+// TODO apply
+// 1. apply的返回类型是 永远都是I（所以你可以链式调用）
+// 2. 匿名函数里面持有的是 this == I == info本身(调用者本身)
+inline fun <I> I.apply(lambda : I.() -> Unit) : I {
+    lambda()
+    return this
+}
