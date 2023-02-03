@@ -8,3 +8,6 @@ const val age = 99
 fun main() {
     val name = "Derry你好"
 }
+
+// 如何查看字节码：菜单栏 -> Tools -> Kotlin -> Show Kotlin Bytecode
+// 如何查看对应的Java代码：上面的字节码显示界面中 -> Decompile

@@ -33,6 +33,7 @@ fun main() {
         Set         无重复的元素集合
         Map         键值对的集合
 
+        Java基本数据类型对应的Kotlin类型，在编译时会转回到Java基本数据类型
         Int.kt   ---> java int
         Float    ---> java float
 

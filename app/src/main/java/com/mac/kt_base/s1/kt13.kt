@@ -4,7 +4,7 @@ package com.mac.kt_base.s1
 fun main() {
     val number = 60
 
-    // range表达式 范围 从哪里 到 哪里
+    // range表达式 范围 从哪里 到 哪里。都是闭区间
 
     if (number in 10..59) {
         println("分数不及格")

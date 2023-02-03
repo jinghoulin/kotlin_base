@@ -6,11 +6,13 @@ fun main() {
 
     // Java if 语句    执行语句代码
     // KT   if 是"表达式" 能够有返回值的
-    // 表达式 比 语句 拥有语句所有共 并且 比语句 更强大
+    // 表达式 比 语句 拥有语句所有功能 并且 比语句 更强大
 
-    // (Any? Any) == java Object
-    // Windows: Ctrl +    S + P
-    // Mac : Control +    S + P
+    // (Any? 或 Any) == java Object
+
+    // 快捷键：查看表达式推断的返回类型。选中表达式后
+    // Windows: Ctrl +    Shift + P
+    // Mac : Control +    Shift + P
     val resultInfo = when(week) {
         1 -> "今天是星期一，非常忙碌的一天开会，听老板画大饼，吹牛逼"
         2 -> "今天是星期二，非常辛苦的写需求，被 UI设计 和 测试 折磨的死去活来"
