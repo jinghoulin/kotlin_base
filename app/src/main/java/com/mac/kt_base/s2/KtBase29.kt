@@ -19,22 +19,22 @@ fun main() {
     }
 
     // 真正的发展历史过程 四个版本的发展过程
-    // 1
+    // 1 具名参数
     loginAPI3(responseResult = { msg, code ->
         println("用户 最终登录的成果如下: msg:$msg, code:$code")
     })
 
-    // 2
+    // 2 省略具名参数
     loginAPI3({ msg, code ->
         println("用户 最终登录的成果如下: msg:$msg, code:$code")
     })
 
-    // 3
+    // 3 lambda作为最后一个参数时，可以移到()外
     loginAPI3() { msg, code ->
         println("用户 最终登录的成果如下: msg:$msg, code:$code")
     }
 
-    // 4 最终的版本
+    // 4 最终的版本 lambda作为唯一参数时，可以省略()
     loginAPI3 { msg, code ->
         println("用户 最终登录的成果如下: msg:$msg, code:$code")
     }

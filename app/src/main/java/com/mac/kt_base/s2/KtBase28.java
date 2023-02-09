@@ -7,6 +7,7 @@ interface ResponseResult {
     void result(String msg, int code);
 }
 
+// 用Java接口回调来实现KtBase28.kt
 public class KtBase28 {
 
     public static void main(String[] args) {

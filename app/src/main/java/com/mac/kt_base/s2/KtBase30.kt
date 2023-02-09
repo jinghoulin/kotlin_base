@@ -13,10 +13,11 @@ fun main() {
 const val USER_NAME_SAVE_DB3 = "Derry"
 const val USER_PWD_SAVE_DB3 = "123456"
 
-// 此函数有使用lambda作为参数，所以就就需要声明内联
+// 此函数有使用lambda作为参数，所以就需要声明内联。可以decompile成Java代码查看效果
 // TODO 如果此函数没有内联，在调用端，会生成多个对象来完成Lambda的调用（会造成性能的损耗）
 // TODO 如果此函数使用内联，在调用端，C++ #define 定义宏 宏替换，会把代码替换到调用处，好处（没有任何函数开辟，对象开辟 等 的损耗）
 // TODO 小结：如果函数参数有Lambda，尽量使用inline关键字修饰，这样内部会做优化，减少，函数开辟，对象开辟 等损耗
+// 编译时：没有内联，调用处会生成FunctionX（X为lambda的参数个数）对象来表示lambda。有内联，会把lambda函数直接搬进调用处
 
 // 模拟：登录API 前端
 public inline fun loginAPI3(username: String, userpwd : String, responseResult: (String, Int) -> Unit) {

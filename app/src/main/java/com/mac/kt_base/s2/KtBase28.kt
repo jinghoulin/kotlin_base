@@ -1,6 +1,6 @@
 package com.mac.kt_base.s2
 
-// TODO 28.函数中定义参数是函数包函数
+// TODO 28.函数中定义参数是函数包函数。相当于Java接口回调
 fun main() {
     // 用户
     loginAPI("Derry3", "123456") { msg, code ->
@@ -13,6 +13,7 @@ const val USER_NAME_SAVE_DB = "Derry"
 const val USER_PWD_SAVE_DB = "123456"
 
 // 模拟：登录API 前端
+// 以lambda函数作为参数，代替了Java的接口回调
 public fun loginAPI(username: String, userpwd : String, responseResult: (String, Int) -> Unit) {
     // KT === 引用的比较    Java ==
     // KT == 值的比较      Java equals

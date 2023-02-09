@@ -20,6 +20,7 @@ fun main() {
 
     println()
 
+    // 因此函数类型的对象也可以用变量传递
     val funTypeObject1 = :: responseResult_FunImpl
     val funTypeObject2 = funTypeObject1
     val funTypeObject3 = funTypeObject2

@@ -4,7 +4,7 @@ package com.mac.kt_base.s2
 fun main() {
     // 前面我们说他是匿名函数，是正确的， 但是随着 匿名函数里面的特性越来越多，其实特性是Lambda的
     // 所以就慢慢的转变成了 Lambda表达式
-    // 匿名函数
+    // 匿名函数：没有函数名，只有{}
     val fun1 = {
         "发生发顺丰"
         // Lambda的特性1
@@ -36,6 +36,6 @@ fun main() {
     }
     println(weekResultFun(100))
 
-    // 小结：{} 确实是匿名函数， 只不过在这个{} Lambda表达式的特性越来越多，就改口叫 Lambda表达式了
+    // 小结：{} 确实是匿名函数， 只不过在这个{}中 Lambda表达式的特性越来越多，就改口叫 Lambda表达式了
     // Kotlin 匿名函数 == Lambda表示
 }

@@ -8,6 +8,8 @@ fun main() {
     val fun1 = {v1: Double, v2: Float, v3: Int ->
         "v1:$v1, v2:$v2, v3:$v3"
     }
+    // 把匿名函数的参数类型和返回类型的声明，放进了{}中
+
     // fun1变量 请问是什么类型？ 面试题 答：(Double, Float, Int) -> String
     println(fun1(5345.5, 35345.4f, 888999))
 

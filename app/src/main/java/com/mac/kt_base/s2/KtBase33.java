@@ -5,10 +5,10 @@ interface IShowResult { // 接口的折中方案 解决 kt的lambda问题
 }
 
 // TODO 33.Kotlin语言的匿名函数与具名函数
-public class KtBase34 {
+public class KtBase33 {
 
     public static void main(String[] args) {
-        // 匿名函数
+        // KtBase33.kt匿名函数相当于
         showPersonInfo("Derry", 38, '男', "学习KT语言中", new IShowResult() {
             @Override
             public void result(String result) {
@@ -18,7 +18,7 @@ public class KtBase34 {
 
         System.out.println();
 
-        // 具名函数
+        // KtBase33.kt具名函数相当于
         IShowResult showResultImpl = new MShowResultImpl();
         showPersonInfo("Derry", 38, '男', "学习KT语言中", showResultImpl);
     }
