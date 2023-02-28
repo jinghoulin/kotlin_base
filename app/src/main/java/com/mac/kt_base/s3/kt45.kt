@@ -11,6 +11,9 @@ fun main() {
     println(n1.equals(n2)) // Java的写法风格
     println(n1 == n2) // Kt的写法风格
 
+    // PS: Java中用字面量"Derry"给字符串赋值，是开辟在字符串常量池中，所以两个字符串用相同的字面量则地址相同
+    // PS: 除非用new String("Derry")赋值，new的对象会开辟在堆中，则地址不同
+
     // TODO === 引用的比较
     println(n1 === n2) // true:字符串常量池 n1 n2 指向同一个
     println(n1 === n3) // n1与n2指向的区域不同，所以引用不同，所以是 false

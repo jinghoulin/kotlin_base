@@ -4,6 +4,7 @@ package com.mac.kt_base.s3
 fun main() {
     val jsonText = "Derry,Derry2,Derry3,Derry4"
 
+    // split里面也是挨个add进List的
     val list: List<String> = jsonText.split(',')
 
     println("分割后的list里面的元素有:${list}")

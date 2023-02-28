@@ -2,17 +2,17 @@ TODO apply: info.apply
 1.apply函数的返回，永远都是返回info本身 （永远都是返回调用者本身） 【等同于also】《推荐 链式调用》
 2.apply函数 的 匿名函数体{ 持有的是 this == info本身（this == 调用者本身） } 【等同于run】
 
-TODO let：集合.let
+TODO let：info.let
 1.let函数的返回，是根据匿名函数最后一行返回的 变化而变化 【等同于run】
-2.let函数 的  的 匿名函数体{ 持有的是 it == 集合本身（it == 调用者本身） }
+2.let函数 的  的 匿名函数体{ 持有的是 it == info本身（it == 调用者本身） }
 
 TODO run: str.run
 1.run函数的返回，是根据匿名函数最后一行返回的 变化而变化 【等同于let】
 2.run函数 的  的 匿名函数体{ 持有的是 this == str（this == 调用者本身） } 【等同于apply、also】
 
 TODO with: with(str)  with和run一模一样，唯一的区别就在于，使用时不同（run可以链式调用，with不可以）
-1.run函数的返回，是根据匿名函数最后一行返回的 变化而变化 【等同于let】
-2.run函数 的  的 匿名函数体{ 持有的是 this == str（this == 传递者本身） } 【等同于apply】
+1.with函数的返回，是根据匿名函数最后一行返回的 变化而变化 【等同于run】
+2.with函数 的  的 匿名函数体{ 持有的是 this == str（this == 参数本身） } 【等同于run】
 name? = null;   name ?.run {}     with(name)
 
 TODO also: str.also

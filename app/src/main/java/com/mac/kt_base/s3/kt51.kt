@@ -35,6 +35,7 @@ fun main() {
         // 下面是 具名函数 的 输出
         .run { "run最后拼接的值是:$this" }   // {}匿名的
         .run(::println) // 具名println
+        // 调用的是println(this)，参数自动传入函数类型对象的函数中
 
     println()
 

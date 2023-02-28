@@ -22,7 +22,7 @@ fun main() {
         8
         true
 
-        println("info字符串长度是:${length}")
+        println("info字符串长度是:${length}")// this可以省略
         println("info最后一个字符是:${this[length - 1]}")
         println("info全部转化成小写:${this.toLowerCase()}")
 
@@ -57,6 +57,7 @@ fun main() {
     println()
 
     // TODO apply内置函数的写法 读取文件功能
+    // 一个apply只做一个功能实现
     /*val file2: File =*/ file.apply {
         setExecutable(true)
     }.apply {
