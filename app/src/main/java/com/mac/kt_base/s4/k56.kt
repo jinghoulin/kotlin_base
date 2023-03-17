@@ -29,5 +29,5 @@ fun main() {
     // getOrNull + 空合并操作符
     println(list.getOrNull(5737) ?: "你越界了哦")
 
-    // 总结：开发过程中，尽量使用 getOrElse 或者 getOrNull，才能体现KT语言的亮点（不用不崩溃）
+    // 总结：开发过程中，尽量使用 getOrElse 或者 getOrNull，才能体现KT语言的亮点（不会崩溃）
 }
