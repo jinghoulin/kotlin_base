@@ -13,10 +13,10 @@ fun main(args: Array<String>) {
     println("name的长度:${name.length}")
 
     // TODO 第二种情况，声明时候 指定 为 可空类型
-    var name2 : String ? = "DerryOK"
+    var name2: String? = "DerryOK"
     name2 = "李元霸"
     name2 = null
     println(name2)
-    println("name的长度:${name2 ?.length}") // ? 如果name2真的是null，就不执行 ?后面的区域.length}
+    println("name的长度:${name2?.length}") // ? 如果name2真的是null，就不执行 ?后面的区域.length}
 
 }

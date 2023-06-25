@@ -14,7 +14,7 @@ fun main() {
     println()
 
     // TODO let方式 对集合第一个元素相加
-    val result : Int = listOf(5, 6, 7, 4, 2).let {
+    val result: Int = listOf(5, 6, 7, 4, 2).let {
         // it == 集合本身
         // Lambda的最后一行，作为放回值，let内置函数的特点     但是我们前面学的apply永远都是返回调用者本身
 
@@ -38,7 +38,7 @@ fun main() {
 }
 
 // 普通方式 对值判null，并返回
-fun get1(value: String?) : String {
+fun get1(value: String?): String {
     return if (value == null) "你传递是null" else "欢迎${value}回来"
 }
 
@@ -46,15 +46,15 @@ fun get1(value: String?) : String {
 fun get2(value: String?) = if (value == null) "你传递是null" else "欢迎${value}回来"
 
 // let方式 对值判null，并返回
-fun get3(value: String?) : String {
-    return value ?.let {
+fun get3(value: String?): String {
+    return value?.let {
         "欢迎${value}回来"
     } ?: "你传递是null"
 }
 
 // let方式 对值判null，并返回 简化版本
 fun get4(value: String?) =
-     value ?.let {
+    value?.let {
         "欢迎${value}回来" // value不是null
     } ?: "你传递是null" // value是null
 

@@ -19,7 +19,13 @@ fun showResultImpl(it: String) {
 }
 
 
-inline fun showPersonInfo(name: String, age: Int, sex: Char, study: String, showResult: (String) -> Unit) {
+inline fun showPersonInfo(
+    name: String,
+    age: Int,
+    sex: Char,
+    study: String,
+    showResult: (String) -> Unit
+) {
     val str = "name:$name, age:$age, sex:$sex, study:$study"
     showResult(str)
 }

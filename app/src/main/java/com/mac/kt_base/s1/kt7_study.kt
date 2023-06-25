@@ -9,7 +9,7 @@ fun main() {
         可读可改     变量名            类型                  值
         var         name     :      String      =       "Derry"
      */
-    var name : String = "Derry"
+    var name: String = "Derry"
     name = "DerryXXX"
     println(name)
 
@@ -17,7 +17,7 @@ fun main() {
         只读          变量名            类型                  值
         val          name2     :      String      =       "Derry2"
      */
-    val name2 : String = "Derry2"
+    val name2: String = "Derry2"
     // name2 = "XXX"
     println(name2)
 

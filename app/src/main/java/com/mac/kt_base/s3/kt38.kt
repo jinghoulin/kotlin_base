@@ -4,7 +4,7 @@ package com.mac.kt_base.s3
 fun main() {
     // ?(补救措施1)，    !!(补救措施2)        if判空(补救措施3)
 
-    var name : String ? = null
+    var name: String? = null
 
     // name.capitalize() // name是可空类型的，可能是null，想要使用name，必须给出 补救措施
 

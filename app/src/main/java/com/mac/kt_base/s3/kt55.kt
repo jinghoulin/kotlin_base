@@ -9,11 +9,11 @@ package com.mac.kt_base.s3
 
 class Manager {
 
-    private var infoValue : String ? = null
+    private var infoValue: String? = null
 
-    fun getInfoValue() : String ? = infoValue
+    fun getInfoValue(): String? = infoValue
 
-    fun setInfoValue(infoValue : String) {
+    fun setInfoValue(infoValue: String) {
         this.infoValue = infoValue
     }
 }

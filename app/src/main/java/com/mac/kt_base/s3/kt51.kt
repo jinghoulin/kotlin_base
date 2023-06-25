@@ -3,9 +3,9 @@ package com.mac.kt_base.s3
 // TODO 51.Kotlin语言的run内置函数
 fun main() {
     // 1.run函数的特点 字符串演示
-    val str : String = "Derry is Successful"
+    val str: String = "Derry is Successful"
 
-    val r1 : Float = str.run {
+    val r1: Float = str.run {
         // this == str本身  调用者本身
         true
         535553.5
@@ -35,17 +35,17 @@ fun main() {
         // 下面是 具名函数 的 输出
         .run { "run最后拼接的值是:$this" }   // {}匿名的
         .run(::println) // 具名println
-        // 调用的是println(this)，参数自动传入函数类型对象的函数中
+    // 调用的是println(this)，参数自动传入函数类型对象的函数中
 
     println()
 
     str.let(::isLong) // it == str本身
         .let(::showText) // it == isLong函数的返回类型 Boolean 的值 本身
         .let(::mapText) // it == mapText函数的返回类型 String 的值 本身
-         // 下面是 匿名函数 的 输出
-         /*.let { // it == mapText函数的返回类型 String 的值 本身
-            println("let最后拼接的值是:$it")
-        }*/
+        // 下面是 匿名函数 的 输出
+        /*.let { // it == mapText函数的返回类型 String 的值 本身
+           println("let最后拼接的值是:$it")
+       }*/
         // 下面是 具名函数 的 输出
         .let { "let最后拼接的值是:$it" }     // {}匿名的
         .let(::derryShowPrintln) // 具名println

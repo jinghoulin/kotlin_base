@@ -33,17 +33,17 @@ fun showFun(info: String)
     }
 }
 
-fun show(info: String) : Boolean {
+fun show(info: String): Boolean {
     println("我是show函数 info:$info")
     return true
 }
 
-fun show2(info: String) : String {
+fun show2(info: String): String {
     println("我是show函数 info:$info")
     return "Derry"
 }
 
-fun show3(info: String) : Char {
+fun show3(info: String): Char {
     println("我是show函数 info:$info")
     return 'C'
 }

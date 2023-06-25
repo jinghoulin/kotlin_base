@@ -5,7 +5,7 @@ fun main() {
     // 匿名函数：返回值类型 自动类型推断为 String
     // fun1 : 必须指定  参数类型 -> 返回类型    类似于 (Int) -> Double
     // fun1 = 类型推断返回类型
-    val fun1 = {v1: Double, v2: Float, v3: Int ->
+    val fun1 = { v1: Double, v2: Float, v3: Int ->
         "v1:$v1, v2:$v2, v3:$v3"
     }
     // 把匿名函数的参数类型和返回类型的声明，放进了{}中

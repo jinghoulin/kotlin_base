@@ -20,7 +20,11 @@ const val USER_PWD_SAVE_DB3 = "123456"
 // 编译时：没有内联，调用处会生成FunctionX（X为lambda的参数个数）对象来表示lambda。有内联，会把lambda函数直接搬进调用处
 
 // 模拟：登录API 前端
-public inline fun loginAPI3(username: String, userpwd : String, responseResult: (String, Int) -> Unit) {
+public inline fun loginAPI3(
+    username: String,
+    userpwd: String,
+    responseResult: (String, Int) -> Unit
+) {
     // KT === 引用的比较    Java ==
     // KT == 值的比较      Java equals
     if (username == null || userpwd == null) {
@@ -47,7 +51,7 @@ public inline fun loginAPI3(username: String, userpwd : String, responseResult: 
 
 // 模拟：后端
 // 登录的API的暴露者 服务器
-fun webServiceLoginAPI3(username: String, userpwd : String) : Boolean {
+fun webServiceLoginAPI3(username: String, userpwd: String): Boolean {
 
     // kt的if是表达式（非常灵活的）     java的if语句（有局限性）
 

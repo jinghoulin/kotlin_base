@@ -33,7 +33,7 @@ public class KtBase33 {
 
     // ---------------------------------
 
-    static void showPersonInfo(String name, int age, char sex, String study , IShowResult iShowResult) {
+    static void showPersonInfo(String name, int age, char sex, String study, IShowResult iShowResult) {
         String str = String.format("name:%s, age:%d, sex:%c, study:%s", name, age, sex, study);
         iShowResult.result(str);
     }

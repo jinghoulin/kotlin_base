@@ -21,8 +21,8 @@ fun main() {
     println(addResultFun(999, 999999))
 
     // java Object    kt Any?(null的值都可以)  Any(非null)
-    val weekResultFun : (Int)-> Any? = { number: Int ->
-        val r : Any? = when(number) {
+    val weekResultFun: (Int) -> Any? = { number: Int ->
+        val r: Any? = when (number) {
             1 -> "星期1"
             2 -> "星期2"
             3 -> "星期3"

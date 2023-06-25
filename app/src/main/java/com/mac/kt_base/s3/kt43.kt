@@ -12,6 +12,6 @@ fun main() {
     list.forEach { println(it) }
 
     // C++解构   KT也有解构
-    val (v1 : String, v2, v3, v4) = list
+    val (v1: String, v2, v3, v4) = list
     println("解构四个只读变量的值是:v1:$v1, v2:$v2, v3:$v3, v4:$v4")
 }

@@ -12,7 +12,7 @@ fun main() /*: Unit*/ {
 
 // Java语言的void关键字(void是 "无参数返回 忽略类型")但是他是关键字啊，不是类型，这个很矛盾
 // : Unit 不写，默认也有， Unit代表  "无参数返回 忽略类型" == Unit类类型
-private fun doWork() : Unit {
+private fun doWork(): Unit {
     return println(123)
 }
 

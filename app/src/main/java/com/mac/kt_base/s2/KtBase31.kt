@@ -1,7 +1,5 @@
 package com.mac.kt_base.s2
 
-import kotlin.math.log
-
 // TODO 31.Kotlin的函数引用讲解
 fun main() {
 
@@ -21,14 +19,14 @@ fun main() {
     println()
 
     // 因此函数类型的对象也可以用变量传递
-    val funTypeObject1 = :: responseResult_FunImpl
+    val funTypeObject1 = ::responseResult_FunImpl
     val funTypeObject2 = funTypeObject1
     val funTypeObject3 = funTypeObject2
     login("XXX", "3333", funTypeObject3)
 }
 
 // KT实实在在的函数本身
-fun responseResult_FunImpl(msg: String, code: Int) : Unit {
+fun responseResult_FunImpl(msg: String, code: Int): Unit {
     println("用户 2 最终登录的成果如下: msg:$msg, code:$code")
 }
 

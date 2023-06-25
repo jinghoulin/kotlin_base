@@ -7,7 +7,7 @@ fun main() {
 
 // 函数默认就是public
 // 先有输入，再有输出，这个是更加符合人类的思维的
-private fun method01(age: Int, name: String)     : Int {
+private fun method01(age: Int, name: String): Int {
     println("name:$name,age:$age")
     return 200
 }

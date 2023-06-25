@@ -14,7 +14,7 @@ const val USER_PWD_SAVE_DB = "123456"
 
 // 模拟：登录API 前端
 // 以lambda函数作为参数，代替了Java的接口回调
-public fun loginAPI(username: String, userpwd : String, responseResult: (String, Int) -> Unit) {
+public fun loginAPI(username: String, userpwd: String, responseResult: (String, Int) -> Unit) {
     // KT === 引用的比较    Java ==
     // KT == 值的比较      Java equals
     if (username == null || userpwd == null) {
@@ -41,7 +41,7 @@ public fun loginAPI(username: String, userpwd : String, responseResult: (String,
 
 // 模拟：后端
 // 登录的API的暴露者 服务器
-private fun webServiceLoginAPI(username: String, userpwd : String) : Boolean {
+private fun webServiceLoginAPI(username: String, userpwd: String): Boolean {
 
     // kt的if是表达式（非常灵活的）     java的if语句（有局限性）
 

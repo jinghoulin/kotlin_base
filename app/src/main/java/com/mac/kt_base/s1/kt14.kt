@@ -13,7 +13,7 @@ fun main() {
     // 快捷键：查看表达式推断的返回类型。选中表达式后
     // Windows: Ctrl +    Shift + P
     // Mac : Control +    Shift + P
-    val resultInfo = when(week) {
+    val resultInfo = when (week) {
         1 -> "今天是星期一，非常忙碌的一天开会，听老板画大饼，吹牛逼"
         2 -> "今天是星期二，非常辛苦的写需求，被 UI设计 和 测试 折磨的死去活来"
         3 -> "今天是星期三，努力写Bug中，写的Bug越来越多，测试 越来越开心"

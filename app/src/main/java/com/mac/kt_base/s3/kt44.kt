@@ -11,7 +11,7 @@ fun main() {
         // println("it:${it.value}") // it.value == A K M N O
         // it.value // 这样写，没有意义，相当于 啥事没有做
 
-        when(it.value) {
+        when (it.value) {
             "A" -> "9"
             "K" -> "3"
             "M" -> "5"
@@ -24,7 +24,7 @@ fun main() {
 
     // 解密操作
     val sourcePwdNew = newPwd.replace(Regex("[93514]")) {
-        when(it.value) {
+        when (it.value) {
             "9" -> "A"
             "3" -> "K"
             "5" -> "M"

@@ -4,8 +4,8 @@ import java.io.File
 
 // TODO 53.Kotlin语言的also内置函数
 fun main() {
-    val str : String = "Derry"
-    val r1 : String = str.also {
+    val str: String = "Derry"
+    val r1: String = str.also {
         true
         5345325.5f
         535

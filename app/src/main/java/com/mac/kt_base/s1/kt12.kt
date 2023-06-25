@@ -11,8 +11,8 @@ package com.mac.kt_base.s1
 //      看起来都是引用类型，实际上编译器会在Java字节码中，修改成 “基本类型”
 
 fun main() {
-    val age : Int = 99
-    val pi : Float = 3.1415926f
-    val pi2 : Double = 3.1415926
-    val isOk : Boolean = true
+    val age: Int = 99
+    val pi: Float = 3.1415926f
+    val pi2: Double = 3.1415926
+    val isOk: Boolean = true
 }
