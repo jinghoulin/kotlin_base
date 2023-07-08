@@ -17,9 +17,9 @@ fun main() {
 
     // 我们写KT代码，一定不会再出现，空指针异常，下标越界异常， 那么就需要按照下面这样写
 
-    println(list.getOrElse(3) {"越界"})
-    println(list.getOrElse(4) {"越界了"})
-    println(list.getOrElse(6734745) {"你越界了啊"})
+    println(list.getOrElse(3) { "越界" })
+    println(list.getOrElse(4) { "越界了" })
+    println(list.getOrElse(6734745) { "你越界了啊" })
 
     println()
 

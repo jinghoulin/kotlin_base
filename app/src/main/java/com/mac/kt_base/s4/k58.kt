@@ -7,7 +7,7 @@ import androidx.annotation.RequiresApi
 @RequiresApi(Build.VERSION_CODES.N)
 fun main() {
     // 1.mutator += -= 操作
-    val list : MutableList<String> = mutableListOf("Derry", "DerryAll", "DerryStr", "Zhangsan")
+    val list: MutableList<String> = mutableListOf("Derry", "DerryAll", "DerryStr", "Zhangsan")
     list += "李四" // mutator的特性 +=   -+ 其实背后就是 运算符重载
     list += "王五"
     list -= "Derry"

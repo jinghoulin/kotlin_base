@@ -21,7 +21,7 @@ class Manager {
 fun main() {
     val manager: Manager = Manager()
 
-    // 补充点
+    // 补充点：it是调用者本身
     /*"Derry1".takeIf { *//*it == "Derry1"*//* }
     "Derry2".takeUnless { *//*it == "Derry2"*//* }*/
 
@@ -36,4 +36,6 @@ fun main() {
 
     val result2 = manager.getInfoValue().takeIf { !it.isNullOrBlank() } ?: "未经过任何初始化的值"
     println("result2:$result2")
+
+    // 小结：takeUnless+空合并操作符一起使用，可以验证字符串有没有初始化
 }

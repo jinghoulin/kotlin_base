@@ -6,14 +6,14 @@ package com.mac.kt_base.s4
 // 可变集合 to 不可变集合
 fun main() {
     // TODO 可变集合
-    val list : MutableList<String> = mutableListOf("Derry", "Zhangsna", "Wangwu")
+    val list: MutableList<String> = mutableListOf("Derry", "Zhangsna", "Wangwu")
     // 可变的集合，可以完成 可变的操作(增加，删除 操作等)
     list.add("赵六")
     list.remove("Wangwu")
     println(list)
 
     // TODO 不可变集合
-    val list2 : List<Int> = listOf(123, 456, 789)
+    val list2: List<Int> = listOf(123, 456, 789)
     // 不可以的集合，无法完成 可变的操作(增加，删除 操作等)
     // list2.add
     // list2.remove
@@ -33,7 +33,7 @@ fun main() {
     list4.remove('A')
     println(list4)
 
-    val list5 : List<Char> = list4.toList()
+    val list5: List<Char> = list4.toList()
     // 不可以的集合，无法完成 可变的操作(增加，删除 操作等)
     /*list5.add
     list5.remove*/
